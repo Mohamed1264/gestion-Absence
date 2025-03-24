@@ -1,0 +1,156 @@
+{
+    "administrator": [
+      {
+        "id_admin": 1,
+        "nom": "Admin",
+        "prenom": "User",
+        "email": "admin@example.com",
+        "password": "hashed_password",
+        "contact": "0123456789"
+      },
+      {
+        "id_admin": 2,
+        "nom": "Super",
+        "prenom": "Admin",
+        "email": "superadmin@example.com",
+        "password": "hashed_password",
+        "contact": "0987654321"
+      }
+    ],
+    "student": [
+      {
+        "id_student": 1,
+        "nom": "Doe",
+        "prenom": "John",
+        "email": "john.doe@example.com",
+        "password": "hashed_password",
+        "contact": "0612345678",
+        "FK_group": 1,
+        "FK_niveau": 1,
+        "FK_session": 1
+      },
+      {
+        "id_student": 2,
+        "nom": "Smith",
+        "prenom": "Jane",
+        "email": "jane.smith@example.com",
+        "password": "hashed_password",
+        "contact": "0623456789",
+        "FK_group": 2,
+        "FK_niveau": 2,
+        "FK_session": 2
+      }
+    ],
+    "teacher": [
+      {
+        "id_teacher": 1,
+        "nom": "Smith",
+        "prenom": "Anna",
+        "email": "anna.smith@example.com",
+        "password": "hashed_password",
+        "contact": "0623456789"
+      },
+      {
+        "id_teacher": 2,
+        "nom": "Johnson",
+        "prenom": "Robert",
+        "email": "robert.johnson@example.com",
+        "password": "hashed_password",
+        "contact": "0634567890"
+      }
+    ],
+    "group": [
+      { "id_group": 1, "nom_group": "DEVOWFS201", "FK_niveau": 1 },
+      { "id_group": 2, "nom_group": "Group B", "FK_niveau": 2 }
+    ],
+    "niveau": [
+      { "id_niveau": 1, "nom_niveau": "First Year" },
+      { "id_niveau": 2, "nom_niveau": "Second Year" }
+    ],
+    "filiere": [
+      { "id_filiere": 1, "nom_filiere": "Computer Science", "FK_niveau": 1 },
+      { "id_filiere": 2, "nom_filiere": "Mathematics", "FK_niveau": 2 }
+    ],
+    "module": [
+      {
+        "id_module": 1,
+        "nom_module": "Web Development",
+        "FK_filiere": 1,
+        "FK_teacher": 1
+      },
+      {
+        "id_module": 2,
+        "nom_module": "Algebra",
+        "FK_filiere": 2,
+        "FK_teacher": 2
+      }
+    ],
+    "salle": [
+      { "id_salle": 1, "nom_salle": "Room 101", "FK_type_salle": 1 },
+      { "id_salle": 2, "nom_salle": "Room 102", "FK_type_salle": 1 }
+    ],
+    "type_salle": [
+      { "id_type_salle": 1, "type_salle": "Laboratory" },
+      { "id_type_salle": 2, "type_salle": "Lecture Hall" }
+    ],
+
+    "seance": [
+      {
+        "id_seance": 1,
+        "jour": "Monday",
+        "heure_debut": "08:30",
+        "heure_fin": "11:00",
+        "FK_salle": 1, 
+        "FK_module": 1,
+        "FK_group": 1,
+        "FK_teacher": 1 ,
+        "date_debut":"2024-09-01",
+        "date_fin":"2025-05-30"
+      },
+      {
+        "id_seance": 2,
+        "jour": "Wednesday",
+        "heure_debut": "13:30",
+        "heure_fin": "16:00",
+        "FK_salle": 2,
+        "FK_module": 2,
+        "FK_group": 2,
+        "FK_teacher": 2,
+        "date_debut":"2024-09-01",
+        "date_fin":"2025-05-30"
+      }
+    ],
+    "session": [
+      {
+        "id_session": 1,
+        "nom_session": "Fall Semester",
+        "date_debut": "2025-09-01",
+        "date_fin": "2025-12-31",
+        "FK_niveau": 1
+      },
+      {
+        "id_session": 2,
+        "nom_session": "Spring Semester",
+        "date_debut": "2026-01-15",
+        "date_fin": "2026-05-30",
+        "FK_niveau": 2
+      }
+    ],
+    "absence": [
+      {
+        "id_absence": 1,
+        "date_absence": "2025-09-15",
+        "status": "Unjustified",
+        "FK_student": 1,
+        "FK_seance": 1
+      },
+      {
+        "id_absence": 2,
+        "date_absence": "2025-09-20",
+        "status": "Unjustified",
+        "FK_student": 2,
+        "FK_seance": 2
+      }
+    ]
+  }
+  

@@ -1,0 +1,2 @@
+const ShortCut = ({shortCut})=>  <span className="text-xs font-medium p-1 rounded-md group-hover:bg-gray-500 group-hover:dark:bg-gray-300 bg-gray-600 dark:bg-gray-200">{shortCut}</span>;
+export default ShortCut;

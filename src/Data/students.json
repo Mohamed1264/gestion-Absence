@@ -1,0 +1,802 @@
+[
+  {
+    "cef": "STU001",
+    "fullName": "Hana Mouline",
+    "age": 23,
+    "gender": "Male",
+    "totalAbsence": 9,
+    "group_id": 2
+  },
+  {
+    "cef": "STU002",
+    "fullName": "Mohamed Hamzaoui",
+    "age": 20,
+    "gender": "Male",
+    "totalAbsence": 5,
+    "group_id": 1
+  },
+  {
+    "cef": "STU003",
+    "fullName": "Mohamed Benali",
+    "age": 20,
+    "gender": "Female",
+    "totalAbsence": 6,
+    "group_id": 2
+  },
+  {
+    "cef": "STU004",
+    "fullName": "Ali Fadili",
+    "age": 24,
+    "gender": "Female",
+    "totalAbsence": 7,
+    "group_id": 3
+  },
+  {
+    "cef": "STU005",
+    "fullName": "Sara Toumi",
+    "age": 21,
+    "gender": "Male",
+    "totalAbsence": 6,
+    "group_id": 1
+  },
+  {
+    "cef": "STU006",
+    "fullName": "Ahmed Toumi",
+    "age": 21,
+    "gender": "Female",
+    "totalAbsence": 3,
+    "group_id": 5
+  },
+  {
+    "cef": "STU007",
+    "fullName": "Sara El Fassi",
+    "age": 23,
+    "gender": "Female",
+    "totalAbsence": 0,
+    "group_id": 5
+  },
+  {
+    "cef": "STU008",
+    "fullName": "Fatima Mouline",
+    "age": 24,
+    "gender": "Female",
+    "totalAbsence": 6,
+    "group_id": 4
+  },
+  {
+    "cef": "STU009",
+    "fullName": "Ahmed Toumi",
+    "age": 24,
+    "gender": "Female",
+    "totalAbsence": 2,
+    "group_id": 1
+  },
+  {
+    "cef": "STU010",
+    "fullName": "Youssef Toumi",
+    "age": 25,
+    "gender": "Female",
+    "totalAbsence": 7,
+    "group_id": 3
+  },
+  {
+    "cef": "STU011",
+    "fullName": "Ali Mouline",
+    "age": 20,
+    "gender": "Female",
+    "totalAbsence": 5,
+    "group_id": 3
+  },
+  {
+    "cef": "STU012",
+    "fullName": "Omar Mouline",
+    "age": 20,
+    "gender": "Male",
+    "totalAbsence": 2,
+    "group_id": 1
+  },
+  {
+    "cef": "STU013",
+    "fullName": "Omar El Fassi",
+    "age": 20,
+    "gender": "Male",
+    "totalAbsence": 9,
+    "group_id": 1
+  },
+  {
+    "cef": "STU014",
+    "fullName": "Nour Hamzaoui",
+    "age": 21,
+    "gender": "Female",
+    "totalAbsence": 5,
+    "group_id": 4
+  },
+  {
+    "cef": "STU015",
+    "fullName": "Fatima Lahcen",
+    "age": 20,
+    "gender": "Female",
+    "totalAbsence": 8,
+    "group_id": 5
+  },
+  {
+    "cef": "STU016",
+    "fullName": "Hana Dakir",
+    "age": 23,
+    "gender": "Male",
+    "totalAbsence": 0,
+    "group_id": 1
+  },
+  {
+    "cef": "STU017",
+    "fullName": "Ali Dakir",
+    "age": 21,
+    "gender": "Female",
+    "totalAbsence": 3,
+    "group_id": 3
+  },
+  {
+    "cef": "STU018",
+    "fullName": "Sara Mouline",
+    "age": 21,
+    "gender": "Female",
+    "totalAbsence": 5,
+    "group_id": 4
+  },
+  {
+    "cef": "STU019",
+    "fullName": "Sara Fadili",
+    "age": 25,
+    "gender": "Female",
+    "totalAbsence": 7,
+    "group_id": 4
+  },
+  {
+    "cef": "STU020",
+    "fullName": "Mohamed Zeroual",
+    "age": 19,
+    "gender": "Male",
+    "totalAbsence": 3,
+    "group_id": 5
+  },
+  {
+    "cef": "STU021",
+    "fullName": "Ali Hamzaoui",
+    "age": 20,
+    "gender": "Male",
+    "totalAbsence": 10,
+    "group_id": 1
+  },
+  {
+    "cef": "STU022",
+    "fullName": "Sara Zeroual",
+    "age": 20,
+    "gender": "Male",
+    "totalAbsence": 3,
+    "group_id": 2
+  },
+  {
+    "cef": "STU023",
+    "fullName": "Khadija Zeroual",
+    "age": 21,
+    "gender": "Female",
+    "totalAbsence": 3,
+    "group_id": 4
+  },
+  {
+    "cef": "STU024",
+    "fullName": "Sara El Fassi",
+    "age": 25,
+    "gender": "Male",
+    "totalAbsence": 6,
+    "group_id": 1
+  },
+  {
+    "cef": "STU025",
+    "fullName": "Ali Benali",
+    "age": 23,
+    "gender": "Male",
+    "totalAbsence": 6,
+    "group_id": 3
+  },
+  {
+    "cef": "STU026",
+    "fullName": "Youssef Benali",
+    "age": 24,
+    "gender": "Male",
+    "totalAbsence": 2,
+    "group_id": 5
+  },
+  {
+    "cef": "STU027",
+    "fullName": "Nour Toumi",
+    "age": 21,
+    "gender": "Female",
+    "totalAbsence": 0,
+    "group_id": 5
+  },
+  {
+    "cef": "STU028",
+    "fullName": "Nour Fadili",
+    "age": 20,
+    "gender": "Female",
+    "totalAbsence": 8,
+    "group_id": 1
+  },
+  {
+    "cef": "STU029",
+    "fullName": "Khadija El Fassi",
+    "age": 22,
+    "gender": "Male",
+    "totalAbsence": 5,
+    "group_id": 1
+  },
+  {
+    "cef": "STU030",
+    "fullName": "Ali Toumi",
+    "age": 18,
+    "gender": "Female",
+    "totalAbsence": 3,
+    "group_id": 4
+  },
+  {
+    "cef": "STU031",
+    "fullName": "Fatima Mouline",
+    "age": 21,
+    "gender": "Male",
+    "totalAbsence": 8,
+    "group_id": 4
+  },
+  {
+    "cef": "STU032",
+    "fullName": "Mohamed El Fassi",
+    "age": 25,
+    "gender": "Male",
+    "totalAbsence": 2,
+    "group_id": 3
+  },
+  {
+    "cef": "STU033",
+    "fullName": "Khadija Dakir",
+    "age": 25,
+    "gender": "Male",
+    "totalAbsence": 9,
+    "group_id": 2
+  },
+  {
+    "cef": "STU034",
+    "fullName": "Ali Rhani",
+    "age": 21,
+    "gender": "Male",
+    "totalAbsence": 4,
+    "group_id": 1
+  },
+  {
+    "cef": "STU035",
+    "fullName": "Nour Rhani",
+    "age": 21,
+    "gender": "Female",
+    "totalAbsence": 9,
+    "group_id": 3
+  },
+  {
+    "cef": "STU036",
+    "fullName": "Hana Benali",
+    "age": 19,
+    "gender": "Male",
+    "totalAbsence": 6,
+    "group_id": 5
+  },
+  {
+    "cef": "STU037",
+    "fullName": "Ahmed Fadili",
+    "age": 21,
+    "gender": "Female",
+    "totalAbsence": 6,
+    "group_id": 4
+  },
+  {
+    "cef": "STU038",
+    "fullName": "Khadija Zeroual",
+    "age": 21,
+    "gender": "Female",
+    "totalAbsence": 5,
+    "group_id": 3
+  },
+  {
+    "cef": "STU039",
+    "fullName": "Fatima Lahcen",
+    "age": 22,
+    "gender": "Female",
+    "totalAbsence": 9,
+    "group_id": 2
+  },
+  {
+    "cef": "STU040",
+    "fullName": "Fatima Hamzaoui",
+    "age": 24,
+    "gender": "Male",
+    "totalAbsence": 8,
+    "group_id": 4
+  },
+  {
+    "cef": "STU041",
+    "fullName": "Ahmed Mouline",
+    "age": 24,
+    "gender": "Female",
+    "totalAbsence": 5,
+    "group_id": 3
+  },
+  {
+    "cef": "STU042",
+    "fullName": "Ahmed Dakir",
+    "age": 19,
+    "gender": "Female",
+    "totalAbsence": 6,
+    "group_id": 2
+  },
+  {
+    "cef": "STU043",
+    "fullName": "Sara Mouline",
+    "age": 23,
+    "gender": "Female",
+    "totalAbsence": 5,
+    "group_id": 3
+  },
+  {
+    "cef": "STU044",
+    "fullName": "Ali Dakir",
+    "age": 24,
+    "gender": "Male",
+    "totalAbsence": 5,
+    "group_id": 1
+  },
+  {
+    "cef": "STU045",
+    "fullName": "Ahmed Mouline",
+    "age": 20,
+    "gender": "Male",
+    "totalAbsence": 7,
+    "group_id": 2
+  },
+  {
+    "cef": "STU046",
+    "fullName": "Ali Dakir",
+    "age": 18,
+    "gender": "Male",
+    "totalAbsence": 6,
+    "group_id": 4
+  },
+  {
+    "cef": "STU047",
+    "fullName": "Ahmed El Fassi",
+    "age": 25,
+    "gender": "Female",
+    "totalAbsence": 6,
+    "group_id": 5
+  },
+  {
+    "cef": "STU048",
+    "fullName": "Mohamed Mouline",
+    "age": 25,
+    "gender": "Male",
+    "totalAbsence": 6,
+    "group_id": 2
+  },
+  {
+    "cef": "STU049",
+    "fullName": "Fatima Lahcen",
+    "age": 24,
+    "gender": "Male",
+    "totalAbsence": 7,
+    "group_id": 2
+  },
+  {
+    "cef": "STU050",
+    "fullName": "Hana Hamzaoui",
+    "age": 23,
+    "gender": "Female",
+    "totalAbsence": 4,
+    "group_id": 5
+  },
+  {
+    "cef": "STU051",
+    "fullName": "Ahmed Hamzaoui",
+    "age": 19,
+    "gender": "Male",
+    "totalAbsence": 0,
+    "group_id": 1
+  },
+  {
+    "cef": "STU052",
+    "fullName": "Ahmed Lahcen",
+    "age": 25,
+    "gender": "Male",
+    "totalAbsence": 5,
+    "group_id": 2
+  },
+  {
+    "cef": "STU053",
+    "fullName": "Ali Benali",
+    "age": 22,
+    "gender": "Female",
+    "totalAbsence": 10,
+    "group_id": 3
+  },
+  {
+    "cef": "STU054",
+    "fullName": "Youssef Zeroual",
+    "age": 18,
+    "gender": "Male",
+    "totalAbsence": 3,
+    "group_id": 3
+  },
+  {
+    "cef": "STU055",
+    "fullName": "Ali Mouline",
+    "age": 23,
+    "gender": "Male",
+    "totalAbsence": 10,
+    "group_id": 4
+  },
+  {
+    "cef": "STU056",
+    "fullName": "Youssef Hamzaoui",
+    "age": 21,
+    "gender": "Female",
+    "totalAbsence": 1,
+    "group_id": 3
+  },
+  {
+    "cef": "STU057",
+    "fullName": "Omar Mouline",
+    "age": 21,
+    "gender": "Male",
+    "totalAbsence": 0,
+    "group_id": 1
+  },
+  {
+    "cef": "STU058",
+    "fullName": "Ali Rhani",
+    "age": 21,
+    "gender": "Male",
+    "totalAbsence": 2,
+    "group_id": 4
+  },
+  {
+    "cef": "STU059",
+    "fullName": "Fatima Dakir",
+    "age": 20,
+    "gender": "Female",
+    "totalAbsence": 8,
+    "group_id": 5
+  },
+  {
+    "cef": "STU060",
+    "fullName": "Youssef Benali",
+    "age": 25,
+    "gender": "Female",
+    "totalAbsence": 10,
+    "group_id": 5
+  },
+  {
+    "cef": "STU061",
+    "fullName": "Youssef Lahcen",
+    "age": 23,
+    "gender": "Male",
+    "totalAbsence": 10,
+    "group_id": 4
+  },
+  {
+    "cef": "STU062",
+    "fullName": "Khadija Fadili",
+    "age": 25,
+    "gender": "Female",
+    "totalAbsence": 4,
+    "group_id": 3
+  },
+  {
+    "cef": "STU063",
+    "fullName": "Youssef Hamzaoui",
+    "age": 24,
+    "gender": "Female",
+    "totalAbsence": 0,
+    "group_id": 1
+  },
+  {
+    "cef": "STU064",
+    "fullName": "Ahmed Toumi",
+    "age": 20,
+    "gender": "Female",
+    "totalAbsence": 0,
+    "group_id": 4
+  },
+  {
+    "cef": "STU065",
+    "fullName": "Fatima Hamzaoui",
+    "age": 18,
+    "gender": "Male",
+    "totalAbsence": 7,
+    "group_id": 2
+  },
+  {
+    "cef": "STU066",
+    "fullName": "Hana Rhani",
+    "age": 22,
+    "gender": "Female",
+    "totalAbsence": 3,
+    "group_id": 1
+  },
+  {
+    "cef": "STU067",
+    "fullName": "Sara Mouline",
+    "age": 24,
+    "gender": "Female",
+    "totalAbsence": 5,
+    "group_id": 4
+  },
+  {
+    "cef": "STU068",
+    "fullName": "Mohamed Benali",
+    "age": 23,
+    "gender": "Female",
+    "totalAbsence": 9,
+    "group_id": 1
+  },
+  {
+    "cef": "STU069",
+    "fullName": "Fatima Fadili",
+    "age": 20,
+    "gender": "Female",
+    "totalAbsence": 10,
+    "group_id": 5
+  },
+  {
+    "cef": "STU070",
+    "fullName": "Hana Fadili",
+    "age": 20,
+    "gender": "Male",
+    "totalAbsence": 7,
+    "group_id": 2
+  },
+  {
+    "cef": "STU071",
+    "fullName": "Mohamed Benali",
+    "age": 23,
+    "gender": "Female",
+    "totalAbsence": 6,
+    "group_id": 4
+  },
+  {
+    "cef": "STU072",
+    "fullName": "Ahmed Lahcen",
+    "age": 19,
+    "gender": "Male",
+    "totalAbsence": 4,
+    "group_id": 4
+  },
+  {
+    "cef": "STU073",
+    "fullName": "Mohamed Rhani",
+    "age": 20,
+    "gender": "Female",
+    "totalAbsence": 6,
+    "group_id": 3
+  },
+  {
+    "cef": "STU074",
+    "fullName": "Fatima Benali",
+    "age": 21,
+    "gender": "Male",
+    "totalAbsence": 0,
+    "group_id": 3
+  },
+  {
+    "cef": "STU075",
+    "fullName": "Fatima Hamzaoui",
+    "age": 23,
+    "gender": "Female",
+    "totalAbsence": 3,
+    "group_id": 1
+  },
+  {
+    "cef": "STU076",
+    "fullName": "Hana Toumi",
+    "age": 24,
+    "gender": "Female",
+    "totalAbsence": 1,
+    "group_id": 5
+  },
+  {
+    "cef": "STU077",
+    "fullName": "Youssef El Fassi",
+    "age": 21,
+    "gender": "Male",
+    "totalAbsence": 1,
+    "group_id": 4
+  },
+  {
+    "cef": "STU078",
+    "fullName": "Ali Lahcen",
+    "age": 25,
+    "gender": "Male",
+    "totalAbsence": 8,
+    "group_id": 1
+  },
+  {
+    "cef": "STU079",
+    "fullName": "Nour Benali",
+    "age": 18,
+    "gender": "Male",
+    "totalAbsence": 3,
+    "group_id": 5
+  },
+  {
+    "cef": "STU080",
+    "fullName": "Khadija El Fassi",
+    "age": 20,
+    "gender": "Female",
+    "totalAbsence": 9,
+    "group_id": 4
+  },
+  {
+    "cef": "STU081",
+    "fullName": "Fatima Hamzaoui",
+    "age": 22,
+    "gender": "Male",
+    "totalAbsence": 10,
+    "group_id": 1
+  },
+  {
+    "cef": "STU082",
+    "fullName": "Ahmed Lahcen",
+    "age": 18,
+    "gender": "Female",
+    "totalAbsence": 1,
+    "group_id": 5
+  },
+  {
+    "cef": "STU083",
+    "fullName": "Ahmed Toumi",
+    "age": 22,
+    "gender": "Male",
+    "totalAbsence": 8,
+    "group_id": 3
+  },
+  {
+    "cef": "STU084",
+    "fullName": "Fatima Lahcen",
+    "age": 21,
+    "gender": "Female",
+    "totalAbsence": 8,
+    "group_id": 5
+  },
+  {
+    "cef": "STU085",
+    "fullName": "Khadija Fadili",
+    "age": 23,
+    "gender": "Female",
+    "totalAbsence": 8,
+    "group_id": 2
+  },
+  {
+    "cef": "STU086",
+    "fullName": "Fatima Hamzaoui",
+    "age": 20,
+    "gender": "Male",
+    "totalAbsence": 6,
+    "group_id": 5
+  },
+  {
+    "cef": "STU087",
+    "fullName": "Khadija El Fassi",
+    "age": 24,
+    "gender": "Female",
+    "totalAbsence": 5,
+    "group_id": 3
+  },
+  {
+    "cef": "STU088",
+    "fullName": "Nour Zeroual",
+    "age": 23,
+    "gender": "Male",
+    "totalAbsence": 3,
+    "group_id": 3
+  },
+  {
+    "cef": "STU089",
+    "fullName": "Hana Mouline",
+    "age": 25,
+    "gender": "Female",
+    "totalAbsence": 2,
+    "group_id": 3
+  },
+  {
+    "cef": "STU090",
+    "fullName": "Ali El Fassi",
+    "age": 25,
+    "gender": "Male",
+    "totalAbsence": 0,
+    "group_id": 5
+  },
+  {
+    "cef": "STU091",
+    "fullName": "Fatima Toumi",
+    "age": 23,
+    "gender": "Male",
+    "totalAbsence": 9,
+    "group_id": 3
+  },
+  {
+    "cef": "STU092",
+    "fullName": "Ali Dakir",
+    "age": 25,
+    "gender": "Female",
+    "totalAbsence": 10,
+    "group_id": 5
+  },
+  {
+    "cef": "STU093",
+    "fullName": "Ali Lahcen",
+    "age": 21,
+    "gender": "Male",
+    "totalAbsence": 5,
+    "group_id": 3
+  },
+  {
+    "cef": "STU094",
+    "fullName": "Khadija Lahcen",
+    "age": 25,
+    "gender": "Female",
+    "totalAbsence": 5,
+    "group_id": 1
+  },
+  {
+    "cef": "STU095",
+    "fullName": "Nour Hamzaoui",
+    "age": 19,
+    "gender": "Female",
+    "totalAbsence": 3,
+    "group_id": 4
+  },
+  {
+    "cef": "STU096",
+    "fullName": "Hana Rhani",
+    "age": 25,
+    "gender": "Female",
+    "totalAbsence": 2,
+    "group_id": 3
+  },
+  {
+    "cef": "STU097",
+    "fullName": "Sara Toumi",
+    "age": 25,
+    "gender": "Male",
+    "totalAbsence": 8,
+    "group_id": 5
+  },
+  {
+    "cef": "STU098",
+    "fullName": "Youssef Benali",
+    "age": 22,
+    "gender": "Female",
+    "totalAbsence": 6,
+    "group_id": 2
+  },
+  {
+    "cef": "STU099",
+    "fullName": "Omar Dakir",
+    "age": 24,
+    "gender": "Female",
+    "totalAbsence": 4,
+    "group_id": 2
+  },
+  {
+    "cef": "STU100",
+    "fullName": "Sara Toumi",
+    "age": 19,
+    "gender": "Female",
+    "totalAbsence": 2,
+    "group_id": 4
+  }
+]
