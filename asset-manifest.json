@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Mohamed1264/gestion-Absence/static/css/main.1bea5b75.css",
+    "main.js": "/Mohamed1264/gestion-Absence/static/js/main.73434199.js",
+    "static/js/213.973550f5.chunk.js": "/Mohamed1264/gestion-Absence/static/js/213.973550f5.chunk.js",
+    "static/js/732.fcab8f22.chunk.js": "/Mohamed1264/gestion-Absence/static/js/732.fcab8f22.chunk.js",
+    "index.html": "/Mohamed1264/gestion-Absence/index.html",
+    "main.1bea5b75.css.map": "/Mohamed1264/gestion-Absence/static/css/main.1bea5b75.css.map",
+    "main.73434199.js.map": "/Mohamed1264/gestion-Absence/static/js/main.73434199.js.map",
+    "213.973550f5.chunk.js.map": "/Mohamed1264/gestion-Absence/static/js/213.973550f5.chunk.js.map",
+    "732.fcab8f22.chunk.js.map": "/Mohamed1264/gestion-Absence/static/js/732.fcab8f22.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1bea5b75.css",
+    "static/js/main.73434199.js"
+  ]
+}
