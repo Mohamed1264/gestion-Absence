@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import data from "../data.json";
+import data from "../db.json";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 
@@ -62,33 +62,37 @@ export default function AttendanceList() {
   const [showExportOptions, setShowExportOptions] = useState(false);
 
   // Check if the group exists
-  const group = data.groups.find((g) => g.id === parseInt(groupId, 10));
+  const group = data.group.find((g) => g.id_group == groupId);
+  console.log(group);
+  
   if (!group) return <p className="text-center text-red-500">Group not found</p>;
 
   const selectedDates = generateDaysInWeek(new Date(startDate), new Date(endDate)); // Generate all the days between start and end date
-  const stagiaires = data.stagiaires.filter((s) => s.group_id === group.id);
+  const stagiaires = data.student.filter((s) => s.FK_group == group.id_group);
+  console.log(stagiaires);
+  
   const sessions = ["S1", "S2", "S3", "S4"];
 
   // Get attendance data for the week
   const attendanceForWeek = stagiaires.map((stagiaire) => {
-    const absenceRecords = data.absences.filter(
+    const absenceRecords = data.absence.filter(
       (record) =>
-        record.stagiaire_id === stagiaire.id &&
+        record.FK_student == stagiaire.id_student &&
         new Date(record.date) >= new Date(startDate) &&
         new Date(record.date) <= new Date(endDate)
     );
     return { stagiaire, absenceRecords };
   });
-
+  
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-8 mt-6">
-      <h2 className="text-2xl font-semibold text-purple-800 dark:text-purple-300 mb-4">{group.name}</h2>
+      <h2 className="text-2xl font-semibold text-purple-800 dark:text-purple-300 mb-4">{group.nom}</h2>
       <h2 className="text-sm text-gray-400 dark:text-gray-500 mb-4">{startDate} à {endDate}</h2>
 
       {/* Export Options */}
       <div className="mb-3 flex gap-2">
         <button
-          onClick={() => exportTableToPDF(startDate, endDate, group.name)}
+          onClick={() => exportTableToPDF(startDate, endDate, group.nom_group)}
           className="mt-4 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition"
         >
           Export Table PDF
@@ -114,7 +118,11 @@ export default function AttendanceList() {
           <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
             {attendanceForWeek.map(({ stagiaire, absenceRecords }) => (
               <tr key={stagiaire.id} className="hover:bg-gray-50 dark:hover:bg-gray-700">
-                <td className="px-2 py-3 text-sm text-gray-900 dark:text-gray-100">{stagiaire.name}</td>
+                <td className="px-2 py-3 text-sm text-gray-900 dark:text-gray-100">
+                  {`${stagiaire.nom} ${stagiaire.prenom}`.length > 20 
+                    ? `${stagiaire.nom} ${stagiaire.prenom}`.slice(0, 20) + "..."
+                    : `${stagiaire.nom} ${stagiaire.prenom}`}
+                </td>
                 {selectedDates.map((date) => {
                   const record = absenceRecords.find(
                     (a) => formatDate(new Date(a.date)) === date

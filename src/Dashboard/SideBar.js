@@ -10,7 +10,6 @@ import { useState } from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
 import { Link, NavLink,useLocation,useNavigate } from 'react-router-dom';
 import Students from '../Students/Students';
-import { students } from '../Users';
 
 const links = [
   {pageName:'Dashboard',pageLink:'/' , shortCut : 'Shift + D'},

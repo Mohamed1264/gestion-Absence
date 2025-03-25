@@ -144,7 +144,7 @@ export const students = [
   ];
 
 export const filieres = [
-    {id:1,libel:'Developement Digital',niveau : 'Teachnicien Specialise',numberGroup: 3, totalAbsence : 2,groups:['DEV101','DEVOWFS201']},
+    {id:1,libel:'DD',numberGroup: 3,niveau : 'Teachnicien Specialise', totalAbsence : 2,groups:['DEV101','DEVOWFS201']},
     {id:2,libel:'GS',numberGroup: 3,niveau : 'Teachnicien ', totalAbsence : 10,groups:['GS101','GS102','GS103']},
     {id:3,libel:'GC',numberGroup: 3,niveau : 'Teachnicien Specialise', totalAbsence : 6,groups:['GC101','GC201','Batiment101']},
     {id:4,libel:'ID',numberGroup: 3,niveau : 'Qualification', totalAbsence : 1,groups:['ID101','ID201','ID101','ID201','ID101','ID201','ID101','ID201','ID101','ID201','ID101','ID201']},

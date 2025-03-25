@@ -113,14 +113,25 @@ export default function Absence() {
   return (
     <div className="w-full  p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
       <div className="flex flex-wrap gap-4">
-        {idg.length > 0 ? (
+      <div
+                
+                className={`${!idgroup? 'border-purple-600 text-purple-600 dark:border-purple-600' :'border-gray-600  text-dark dark:text-white'} 
+                p-0.5 mb-3 cursor-pointer border-b-2 hover:text-purple-600 
+                  hover:border-purple-600 dark:hover:border-purple-600 dark:border-gray-600 dark:hover:text-purple-600 transition duration-200`}
+              >
+                <Link to={`/givePermission`} className="text-ml ">
+                  All Groups
+                </Link>  
+              </div>
+              {idg.length > 0 ? (
           dataA.group
             .filter((g) => idg.includes(g.id_group)) // Filter groups by idg
             .map((g, i) => (
               <div
                 key={i}
-                className={`${g.id_group==idgroup? 'border-purple-600 text-purple-600' :'border-gray-600'} p-0.5 mb-3 cursor-pointer border-b-2 text-dark hover:text-purple-600 dark:text-white
-                  hover:border-purple-600 dark:border-gray-600 dark:hover:bg-gray-700 transition duration-200`}
+                className={`${g.id_group===idgroup? 'border-purple-600 text-purple-600 dark:border-purple-600' :'border-gray-600  text-dark dark:text-white'} 
+                p-0.5 mb-3 cursor-pointer border-b-2 hover:text-purple-600 
+                  hover:border-purple-600 dark:hover:border-purple-600 dark:border-gray-600 dark:hover:text-purple-600 transition duration-200`}
               >
                 <Link to={`/givePermission/${g.id_group}`} className="text-ml ">
                   {g.nom_group}

@@ -4,6 +4,7 @@ import { TableProvider } from "../Context";
 import Table from "../LittleComponents/Table";
 import { Fconfig } from "../Configurations";
 import { filieres } from "../Users";
+import data from "../db.json"
 import DropDownMenu from "../LittleComponents/DropDownMenu"; // Import DropDownMenu
 
 export default function Filieres() {
@@ -16,14 +17,28 @@ export default function Filieres() {
     { colName: "Number of Groups", accessor: "numberGroup", sortable: true },
     { colName: "Groups", accessor: "groups", sortable: false },
   ];
+  const fil = data.filiere.map((f) => {
+    const niveau = data.niveau.find((n) => n.id_niveau === f.FK_niveau)?.nom_niveau || "Unknown";
+    const filiereGroups = data.group.filter((g) => g.FK_filiere === f.id_filiere);
+  
+    return {
+      id: f.id_filiere,
+      libel: f.nom_filiere,
+      niveau: niveau,  // Now a string, not an array
+      numberGroup: filiereGroups.length,
+      groups: filiereGroups.map((g) => g.nom_group)
+    };
+  });
+  
+  
 
   return (
     <>
-      <Title dataset={filieres} title={"Filières"} link={"/addFiliere"} alerted />
+      <Title dataset={fil} title={"Filières"} link={"/addFiliere"} alerted />
 
         <Table
           columns={cols}
-          data={filieres} // ✅ Pass correct data
+          data={fil} // ✅ Pass correct data
           config={Fconfig}
           dropDown={true} // ✅ Enable dropdown
           item={selectedItem}

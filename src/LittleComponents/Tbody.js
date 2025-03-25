@@ -25,7 +25,7 @@ export default function Tbody({ data, config, columns, selectedItems, handleChec
                   checked={selectedItems.includes(t.id)}
                   onChange={() => handleCheckboxChange(t.id)}
                 />
-                <div className="w-5 h-5 flex items-center justify-center border-2 border-gray-300 rounded-md peer-checked:border-red-600 peer-checked:bg-red-600"></div>
+                <div className="w-5 h-5 flex items-center justify-center border-2 border-gray-300 rounded-md peer-checked:border-purple-600 peer-checked:bg-purple-600"></div>
               </label>
             </td>
           )}

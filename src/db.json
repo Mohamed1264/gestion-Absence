@@ -60,16 +60,16 @@
       }
     ],
     "group": [
-      { "id_group": 1, "nom_group": "DEVOWFS201", "FK_niveau": 1 },
-      { "id_group": 2, "nom_group": "Group B", "FK_niveau": 2 }
+      { "id_group": 1, "nom_group": "DEVOWFS201", "FK_niveau": 1 , "FK_filiere": 1 },
+      { "id_group": 2, "nom_group": "GE101", "FK_niveau": 1 , "FK_filiere": 2}
     ],
     "niveau": [
-      { "id_niveau": 1, "nom_niveau": "First Year" },
-      { "id_niveau": 2, "nom_niveau": "Second Year" }
+      { "id_niveau": 1, "nom_niveau": "Teachnicien Specialise" },
+      { "id_niveau": 2, "nom_niveau": "Teachnicien " }
     ],
     "filiere": [
-      { "id_filiere": 1, "nom_filiere": "Computer Science", "FK_niveau": 1 },
-      { "id_filiere": 2, "nom_filiere": "Mathematics", "FK_niveau": 2 }
+      { "id_filiere": 1, "nom_filiere": "Developpement digital", "FK_niveau": 1 },
+      { "id_filiere": 2, "nom_filiere": "Gestion d'Entreprise", "FK_niveau": 2 }
     ],
     "module": [
       {
@@ -80,7 +80,7 @@
       },
       {
         "id_module": 2,
-        "nom_module": "Algebra",
+        "nom_module": "PIE",
         "FK_filiere": 2,
         "FK_teacher": 2
       }
@@ -136,6 +136,7 @@
         "FK_niveau": 2
       }
     ],
+    
     "absence": [
       {
         "id_absence": 1,
