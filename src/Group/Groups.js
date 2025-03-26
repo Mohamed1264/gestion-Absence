@@ -17,6 +17,24 @@ export default function Filieres(){
       {colName:'Total Absence',accessor : 'totalAbsence',sortable : true},
       {colName:'Today Absence',accessor : 'todayAbsence',sortable : true},
     ]
+
+   
+
+     // const gr = data.group.map((g) => {
+      //   const niveau = data.niveaux.find((n) => n.id_niveau === g.FK_niveau)?.nom_niveau || "Unknown";
+      //   const filiereGroups = data.filiere.filter((f) => f.id_filiere === g.FK_filiere);
+        
+      //   return {
+      //     id: g.id_group,
+      //     libel: g.nom_group,
+      //     filiere:filiereGroups,
+      //     year: niveau,  
+      //     numberStudents: data.
+          
+      //     numberGroup: filiereGroups.length,
+      //     groups: filiereGroups.map((g) => g.nom_group)
+      //   };
+      // });
     return (
       <>
       <Title dataset={groups} title={"group"} alerted />

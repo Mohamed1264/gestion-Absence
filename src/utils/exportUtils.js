@@ -1,118 +1,83 @@
 import jsPDF from "jspdf";
+import "jspdf-autotable";
 import * as XLSX from "xlsx";
 import { saveAs } from "file-saver";
 
-
-
-// 📌 Export to JSON
-export const exportToJSON = (data) => {
-  const jsonContent = JSON.stringify(data, null, 2);
-  const blob = new Blob([jsonContent], { type: "application/json" });
-
-  const link = document.createElement("a");
-  link.href = URL.createObjectURL(blob);
-  link.download = "table_data.json";
-  document.body.appendChild(link);
-  link.click();
-};
-// utils/exportUtils.js
-
-
-
-
-export const exportToPDF = (data, columns) => {
-  if (!Array.isArray(data) || data.length === 0) {
-    alert("Aucune donnée à exporter !");
-    return;
-  }
-  if (!Array.isArray(columns) || columns.length === 0) {
-    alert("Aucune colonne définie !");
-    return;
+export const exportToPDF = (data, columns, options = {}) => {
+  const doc = new jsPDF("p", "mm", "a4");
+  
+  // Add OFPPT logo from public folder
+  try {
+    const logoUrl = '/OFPPT.jpg';
+    doc.addImage(logoUrl, 'JPEG', 15, 10, 30, 15); // x, y, width, height
+  } catch (e) {
+    console.warn("Could not load logo:", e);
   }
 
-  const doc = new jsPDF();
-  const logoUrl = `${window.location.origin}/OFPPT.jpg`; // Access logo from public folder
+  // Header text
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(13);
+  doc.text("Office de la Formation Professionnelle", 55, 18); // Adjusted y-position
 
-  const imgWidth = 30;
-  const imgHeight = 30;
+  // Table configuration
+  doc.autoTable({
+    head: [columns.map(c => c.colName)],
+    body: data.map(row => columns.map(col => row[col.accessor] ?? "-")),
+    startY: 35, // Increased to account for logo
+    styles: { 
+      fontSize: 9,
+      halign: 'center',
+      valign: 'middle',
+      fillColor: 255, // White background
+      textColor: 0,   // Black text
+      lineColor: 0,   // Black borders
+      lineWidth: 0.2
+    },
+    headStyles: { 
+      fillColor: 255, // White header background (changed from gray)
+      textColor: 0,   // Black header text
+      lineColor: 0,
+      lineWidth: 0.2,
+      fontStyle: 'bold'
+    },
+    bodyStyles: {
+      fillColor: 255, // White body background
+      textColor: 0,   // Black text
+      lineColor: 0,   // Black borders
+      lineWidth: 0.2
+    },
+    columnStyles: {
+      '__all__': {
+        cellWidth: 'wrap',
+        lineColor: 0
+      }
+    },
+    tableLineColor: 0,
+    tableLineWidth: 0.2
+  });
 
-  const reader = new FileReader();
-
-  fetch(logoUrl)
-    .then((res) => res.blob())
-    .then((blob) => {
-      reader.readAsDataURL(blob);
-      reader.onloadend = () => {
-        const logoBase64 = reader.result;
-
-        // 🏫 School Info and Logo
-        doc.addImage(logoBase64, "JPEG", 10, 10, imgWidth, imgHeight);
-        doc.setFontSize(16);
-        doc.text(" OFPPT", 50, 15);
-        doc.setFontSize(12);
-        doc.text("Adresse: Hay elhassani , Dakhla", 50, 22);
-        doc.text("Téléphone: +212 612345678", 50, 29);
-        doc.text("Email: contact@ofppt.ma", 50, 36);
-
-        doc.setFontSize(18);
-
-        let y = 60;
-
-        // 🟣 Table Header
-        doc.setFontSize(12);
-        doc.setFont(undefined, "bold");
-        columns.forEach((col, index) => {
-          const x = 10 + index * 50;
-          doc.text(String(col.colName), x, y);
-        });
-
-        y += 10;
-        doc.setFont(undefined, "normal");
-
-        // 🟡 Table Data
-        data.forEach((row) => {
-          columns.forEach((col, index) => {
-            const value = row[col.accessor] !== undefined ? String(row[col.accessor]) : "";
-            const x = 10 + index * 50;
-            doc.text(value, x, y);
-          });
-          y += 10;
-
-          // If the page height limit is reached, add a new page
-          if (y > 280) {
-            doc.addPage();
-            y = 20;
-          }
-        });
-
-        // 💾 Save the PDF
-        doc.save("rapport.pdf");
-      };
-    })
-    .catch((error) => {
-      console.error("Erreur lors du chargement du logo :", error);
-      alert("Impossible de charger le logo pour le PDF !");
-    });
+  doc.save(`${options.fileName || "report"}_${new Date().toISOString().slice(0,10)}.pdf`);
+};
+// Excel Export
+export const exportToExcel = (data, columns, options = {}) => {
+  const ws = XLSX.utils.json_to_sheet(data.map(row => 
+    columns.reduce((obj, col) => ({ ...obj, [col.colName]: row[col.accessor] }), {})
+  ));
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, options.sheetName || "Sheet1");
+  XLSX.writeFile(wb, `${options.fileName || "data"}_${new Date().toISOString().slice(0,10)}.xlsx`);
 };
 
+// JSON Export
+export const exportToJSON = (data, options = {}) => {
+  const blob = new Blob([JSON.stringify(data, null, options.prettyPrint ? 2 : 0)], { type: "application/json" });
+  saveAs(blob, `${options.fileName || "data"}_${new Date().toISOString().slice(0,10)}.json`);
+};
 
-
-
-
-
-// 📌 Export to Excel
-export const exportToExcel = (data, columns) => {
-  const worksheet = XLSX.utils.json_to_sheet(
-    data.map((row) =>
-      Object.fromEntries(columns.map((col) => [col.colName, row[col.accessor]]))
-    )
-  );
-
-  const workbook = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(workbook, worksheet, "Table Data");
-
-  const excelBuffer = XLSX.write(workbook, { bookType: "xlsx", type: "array" });
-  const excelFile = new Blob([excelBuffer], { type: "application/octet-stream" });
-
-  saveAs(excelFile, "table_data.xlsx");
+// Unified Export
+export const exportData = {
+  pdf: exportToPDF,
+  excel: exportToExcel,
+  json: exportToJSON,
+  to: (format, data, columns = [], options = {}) => exportData[format]?.(data, columns, options)
 };

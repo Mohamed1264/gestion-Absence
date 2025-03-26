@@ -22,6 +22,7 @@
         "id_student": 1,
         "nom": "Doe",
         "prenom": "John",
+        "age":21,
         "email": "john.doe@example.com",
         "password": "hashed_password",
         "contact": "0612345678",
@@ -33,10 +34,11 @@
         "id_student": 2,
         "nom": "Smith",
         "prenom": "Jane",
+        "age":18,
         "email": "jane.smith@example.com",
         "password": "hashed_password",
         "contact": "0623456789",
-        "FK_group": 2,
+        "FK_group": 1,
         "FK_niveau": 2,
         "FK_session": 2
       }
@@ -59,9 +61,20 @@
         "contact": "0634567890"
       }
     ],
+    "teach": [
+      { "id": 1, "FK_teacher":1,"FK_group":2},
+      { "id": 2, "FK_teacher":1,"FK_group":2},
+      { "id": 3, "FK_teacher":1,"FK_group":2}
+    ],
+
+    "niveaux": [
+      { "id_niveau": 1, "nom_niveau": "1ere"},
+      { "id_niveau": 2, "nom_niveau": "2eme"},
+      { "id_niveau": 3, "nom_niveau": "3eme"}
+    ],
     "group": [
-      { "id_group": 1, "nom_group": "DEVOWFS201", "FK_niveau": 1 , "FK_filiere": 1 },
-      { "id_group": 2, "nom_group": "GE101", "FK_niveau": 1 , "FK_filiere": 2}
+      { "id_group": 1, "nom_group": "DEVOWFS201", "FK_filiere": 1 ,"FK_Niveaux":1  },
+      { "id_group": 2, "nom_group": "GE101", "FK_filiere": 2 ,"FK_Niveaux":1}
     ],
     "niveau": [
       { "id_niveau": 1, "nom_niveau": "Teachnicien Specialise" },

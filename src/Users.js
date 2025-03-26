@@ -130,15 +130,14 @@ export const students = [
     },
     {
       id:7,
-  
       cef: "S007",
       name: "David Lee",
       age: 16,
       gender: "Male",
       group: "GS201",
       totalAbsences: 10,
-       yesterdayAbsence: 1,
-    isAbsentToday : 'Yes'
+      yesterdayAbsence: 1,
+      isAbsentToday : 'Yes'
    
     }
   ];

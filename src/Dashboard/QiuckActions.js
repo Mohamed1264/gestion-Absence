@@ -18,20 +18,8 @@ export default function QuickActions(){
       title : "Justifier l'absence ",
       icon : <PencilRuler size={iconSize}/>,
       shortCut : 'J'
-    },
-    {
-      link :'/addGroup',
-      title : 'Ajouter un group',
-      icon : <Presentation size={iconSize}/>,
-      shortCut : 'G'
-    },
-    
-    {
-      link :'/addRoom',
-      title : 'Ajouter une Salle',
-      icon : <School size={iconSize} />,
-      shortCut : 'R'
     }
+      
   ]
 
     const [activeMenu,setActiveMenu] = useState(false)
@@ -53,18 +41,7 @@ export default function QuickActions(){
         nv('/givePermission')
       }
     });
-    useHotkeys("g", ()=>{
-      if (activeMenu) {
-        nv('/addGroup')
-      }
-    });
-
-
-    useHotkeys("r", ()=>{
-      if (activeMenu) {
-        nv('/addRoom')
-      }
-    });
+    
 
 
     return (
